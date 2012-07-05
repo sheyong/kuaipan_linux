@@ -1,4 +1,11 @@
 kuaipan_linux 是一个基于快盘OPENAPI开发的linux下的同步盘。
-
+本程序使用了liboauth,json-cpp，libsqlite3,libcurl等开源库。
 kuaipan openapi:http://www.kuaipan.cn/developers/document.htm
 
+kuaipan_linux
+	kuaipan_sdk
+		kp_oauth:oauth验证，封装了requestToken,authorize,accessToken.
+		kp_api：封装了快盘openAPI，包括get_account_info,create_folder,copy_folder,move_foledr等等.
+
+	kuaipan_demo
+		kp_sycn:使用sdk实现的同步盘，对本地/服务器的目录进行遍历，记录文件信息，并同步相应文件。
